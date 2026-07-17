@@ -2,24 +2,16 @@ package main
 
 import (
 	c "OrientacaoObjeto/banco/contas"
+	//cl "OrientacaoObjeto/banco/clientes"
 	"fmt"
 )
 
 func main() {
-	contaDaSilvia := c.ContaCorrente{
-		Titular: "Silvia",
-		Saldo:   1000.0,
-	}
-
-	contaDoGustavo := c.ContaCorrente{
-		Titular: "Gustavo",
-		Saldo:   500.0,
-	}
-
-	status := contaDaSilvia.Transferir(900.0, &contaDoGustavo)
-
-	fmt.Println(status)
-	fmt.Println(contaDaSilvia)
-	fmt.Println(contaDoGustavo)
+	contaDenis := c.ContaPoupanca{}
+	contaDenis.Depositar(100)
+	contaDenis.Sacar(55)
+	fmt.Println(contaDenis.ObterSaldo())
+	contaPatricia := c.ContaCorrente{}
+	fmt.Println(contaPatricia)
 
 }
